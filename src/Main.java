@@ -1,6 +1,8 @@
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.Arrays;
+
 public class Main extends Thread {
     static String[] Pictures = {"jpg","png","bmp","gif","webp","cr2","nef","psd", "tiff"};
     static String[] Videos = {"mp4","avi","mov","m4v","mkv","mpg","mpeg","wmv","3gp"};
@@ -34,6 +36,16 @@ public class Main extends Thread {
         } else {
             System.out.println("Invalid directory or directory does not exist.");
         }
+
+        System.out.println(Arrays.toString(directory.listFiles()));
+
+        if (directory.listFiles().length > 0) {
+            System.out.println("nie pusta");
+        } else {
+            System.out.println("pusta");
+            MyFrame.endShow();
+        }
+
     }
 
     public static void mySearch(File[] files) {

@@ -33,4 +33,17 @@ public class MyFrame extends JFrame {
     }
 
     public String getUserInput() {return userInput;}
+
+    public static void endShow() {
+        JFrame frameOne = new JFrame("Finish!");
+        frameOne.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameOne.setSize(200, 120);
+        frameOne.setLocation(710, 420);
+
+        JLabel labelOne = new JLabel("Finish");
+        frameOne.add(labelOne, BorderLayout.NORTH);
+        frameOne.setVisible(true);
+    }
+
+
 }
